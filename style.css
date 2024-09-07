@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+h1,h2 {
+    margin: 0;
+}
+
+/* Carré simple */
+
+.titre {
+    text-align: center;
+    background-color: black;
+    padding: 1em;
+    color: white;
+}
+
+.content {
+    padding: 1em 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.carre {
+    background-color:yellowgreen;
+    width:30%;
+}
+
+/* le ::after permet de signifier que la div un carré */
+.carre::after {
+    /* Création d'un faux élément */
+    content: '';
+    /* Permet de définir la hauteur pour donner un carré en se basant sur la largeur de la div */
+    padding-top: 100%;
+    /* le display permet au padding top ou bottom de fonctionner car le after est comme un élément inline */
+    display: block;
+}
+
+/* Grille de logos */
+.grille {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(25%,1fr));
+   grid-gap: 1em;
+}
+
+.grilleLogo {
+    background-color:yellowgreen;
+    width: 40%;
+    /* Positionnement de chaque div en relatif afin de permettre la position des logos au milieu et en absolute */
+    position: relative;
+  
+}
+
+.grilleLogo::after {
+    content: '';
+    padding-top: 100%;
+    display: block;
+}
+.grilleLogo img {
+    max-width: 100%;
+    /* Positionne des images au milieu de leur carré respectif */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
