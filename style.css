@@ -42,6 +42,8 @@ h1,h2 {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(25%,1fr));
    grid-gap: 1em;
+   /* Place les éléments au milieu de la page */
+   place-items: center;
 }
 
 .grilleLogo {
