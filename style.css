@@ -27,7 +27,7 @@ h1,h2 {
     width:30%;
 }
 
-/* le ::after permet de signifier que la div un carré */
+/* le ::after permet de signifier que la div est un carré */
 .carre::after {
     /* Création d'un faux élément */
     content: '';
